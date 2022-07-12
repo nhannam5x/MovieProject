@@ -1,0 +1,16 @@
+@import "../../../assets/scss/main.scss";
+.container {
+  .dashboard__wrapper {
+    .dasdashboard__analys {
+      height: 66px;
+      width: auto;
+      background: $c-blue-bold;
+
+      h3 {
+        color: $c-white;
+        font-size: $fs-28;
+        padding: 8px 16px;
+      }
+    }
+  }
+}

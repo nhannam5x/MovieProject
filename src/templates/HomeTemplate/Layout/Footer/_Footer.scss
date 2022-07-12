@@ -1,0 +1,114 @@
+@import "../../../../assets/scss/main.scss";
+.footer {
+  background: $c-black;
+  font-size: $fs-16;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 25rem;
+
+    .footer__top {
+      display: flex;
+      flex-direction: row;
+      .footer__item {
+        width: calc(100% / 3);
+        margin-top: 2.5rem;
+
+        h3 {
+          color: $c-white;
+          opacity: 0.7;
+        }
+
+        ul {
+          list-style-type: none;
+          text-decoration: none;
+          color: inherit;
+        }
+
+        .footer__partner {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+
+          a {
+            margin: 0 1.2rem 1.2rem 0;
+            color: $c-white !important;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+
+        .footer__contact {
+          .footer__app {
+            a {
+              display: inline-block;
+              margin-right: 1.2rem;
+
+              img {
+                width: 3.3rem;
+                height: 3.5rem;
+              }
+            }
+          }
+
+          .footer__social {
+            @extend .footer__app;
+            // Kế thừa thuộc tính của footer__app
+          }
+        }
+      }
+    }
+
+    .footer__midle {
+      opacity: 0.4;
+    }
+
+    .footer__bottom {
+      display: flex;
+      flex-direction: row;
+      margin: 2rem 0 0 0;
+
+      .footer__bottom--item1 {
+        width: 15%;
+
+        img {
+          font-size: $fs-14;
+          border-radius: $fs-10;
+
+          width: $fs-80;
+          height: auto;
+        }
+      }
+
+      .footer__bottom--item2 {
+        width: 70%;
+
+        h3 {
+          color: $c-white;
+          opacity: 0.8;
+        }
+        p {
+          color: $c-grey;
+          margin: 0;
+        }
+        a {
+          text-decoration: none;
+          color: $c-red;
+        }
+      }
+
+      .footer__bottom--item3 {
+        width: 15%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media only screen and (width: 375px) and (height: 635px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  }
+}

@@ -1,0 +1,125 @@
+{
+    "arrPartners": [
+      {
+        "id": 1,
+        "name": "cgv",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/cgv.png",
+        "webSite": "https://www.cgv.vn/"
+      },
+      {
+        "id": 2,
+        "name": "bhd",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/bhd.png",
+        "webSite": "http://bhdstar.vn/"
+      },
+      {
+        "id": 3,
+        "name": "galaxy",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/galaxycine.png",
+        "webSite": "http://galaxycine.vn/"
+      },
+      {
+        "id": 4,
+        "name": "cinestar",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/cinestar.png",
+        "webSite": "http://cinestar.com.vn/"
+      },
+      {
+        "id": 5,
+        "name": "lotte",
+        "hinhAnh": "https://s3img.vcdn.vn/123phim/2018/09/404b8c4b80d77732e7426cdb7e24be20.png",
+        "webSite": "http://lottecinemavn.com/"
+      },
+      {
+        "id": 6,
+        "name": "megago",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/megags.png",
+        "webSite": "https://www.megagscinemas.vn/"
+      },
+      {
+        "id": 7,
+        "name": "beta",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/bt.jpg",
+        "webSite": "https://www.betacineplex.vn/"
+      },
+      {
+        "id": 8,
+        "name": "ddcinema",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/dongdacinema.png",
+        "webSite": "http://ddcinema.vn/"
+      },
+      {
+        "id": 9,
+        "name": "touchcinema",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/TOUCH.png",
+        "webSite": "https://touchcinema.com/"
+      },
+      {
+        "id": 10,
+        "name": "cinemax",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/cnx.jpg",
+        "webSite": "https://cinemaxvn.com/"
+      },
+      {
+        "id": 11,
+        "name": "starlight",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/STARLIGHT.png",
+        "webSite": "http://starlight.vn/"
+      },
+      {
+        "id": 12,
+        "name": "dcine",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/dcine.png",
+        "webSite": "https://www.dcine.vn/"
+      },
+      {
+        "id": 13,
+        "name": "zlpay",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/zalopay_icon.png",
+        "webSite": "https://zalopay.vn/"
+      },
+      {
+        "id": 14,
+        "name": "payoo",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/payoo.jpg",
+        "webSite": "https://www.payoo.vn/"
+      },
+      {
+        "id": 15,
+        "name": "vcb",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/VCB.png",
+        "webSite": "https://www.vietcombank.com.vn/"
+      },
+      {
+        "id": 16,
+        "name": "arb",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/AGRIBANK.png",
+        "webSite": "http://www.agribank.com.vn/"
+      },
+      {
+        "id": 17,
+        "name": "vtb",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/VIETTINBANK.png",
+        "webSite": "https://www.vietinbank.vn/"
+      },
+      {
+        "id": 18,
+        "name": "ivb",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/IVB.png",
+        "webSite": "https://www.indovinabank.com.vn/"
+      },
+      {
+        "id": 19,
+        "name": "123go",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/123go.png",
+        "webSite": "http://123go.vn/"
+      },
+      {
+        "id": 20,
+        "name": "laban",
+        "hinhAnh": "https://tix.vn/app/assets/img/icons/laban.png",
+        "webSite": "http://laban.vn/"
+      }
+    ]
+  }
+   

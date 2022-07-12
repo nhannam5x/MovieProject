@@ -1,0 +1,44 @@
+// Color
+$c-black: #222222;
+$c-white: #fff;
+$c-grey: #949494;
+$c-red: #fb4226;
+$c-blue: #0687cc;
+$c-blue-bold: rgba(30, 51, 104, 1);
+
+// FontSize (đã đặt mặc định fontsize = 62.5% => 1rem = 10px)
+// https://evondev.com/nen-su-dung-don-vi-em-hay-rem/ (Bài viết tham khảo)
+$fs-10: 1rem;
+$fs-12: 1.2rem;
+$fs-14: 1.4rem;
+$fs-16: 1.6rem;
+$fs-18: 1.8rem;
+$fs-20: 2rem;
+$fs-22: 2.2rem;
+$fs-24: 2.4rem;
+$fs-26: 2.6rem;
+$fs-28: 2.8rem;
+$fs-30: 3rem;
+$fs-34: 3.4rem;
+$fs-36: 3.6rem;
+$fs-40: 4rem;
+$fs-60: 6rem;
+$fs-80: 8rem;
+
+// FontWeight
+$fw-1: 100;
+$fw-2: 200;
+$fw-3: 300;
+$fw-4: 400;
+$fw-5: 500;
+$fw-6: 600;
+$fw-7: 700;
+$fw-8: 800;
+$fw-9: 900;
+
+// Margin
+
+// Padding
+$pd-1: 1rem;
+
+// Spacing

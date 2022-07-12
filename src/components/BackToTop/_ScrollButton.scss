@@ -1,0 +1,20 @@
+@import "../../assets//scss//main.scss";
+.scroll-button {
+  color: $c-white;
+  font-size: $fs-26;
+  background: $c-blue;
+  margin-top: 5rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+
+  :hover {
+    opacity: 0.8;
+  }
+
+  svg {
+    margin: 0 auto;
+    font-size: $fs-14;
+    font-weight: $fw-5;
+  }
+}

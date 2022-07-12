@@ -1,0 +1,31 @@
+@mixin responsive($width) {
+  @if $width == 1400 {
+    @media only screen and (max-width: 1400px) {
+      @content;
+    }
+  } @else if $width == 1200 {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  } @else if $width == 1024 {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $width == 992 {
+    @media only screen and (max-width: 992px) {
+      @content;
+    }
+  } @else if $width == 768 {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  } @else if $width == 576 {
+    @media only screen and (max-width: 576px) {
+      @content;
+    }
+  } @else if $width == 376 {
+    @media only screen and (max-width: 376px) {
+      @content;
+    }
+  }
+}

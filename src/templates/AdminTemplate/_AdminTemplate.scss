@@ -1,0 +1,19 @@
+@import "../../assets/scss/main.scss";
+.admin__logo {
+  text-transform: uppercase;
+  font-weight: $fw-5;
+  font-size: $fs-20;
+}
+.admin__dangxuat {
+  color: #fff;
+  font-weight: 500;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.admin__menu {
+  font-weight: 500;
+}

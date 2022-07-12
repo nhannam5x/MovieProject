@@ -1,0 +1,38 @@
+@import "../../../../assets/scss/main.scss";
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  font-size: $fs-16;
+
+  .container {
+    height: 60px;
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: row;
+}
+.header__logo a {
+  top: 50%;
+}
+.header__logo img {
+  width: 100px;
+  height: 80px;
+}
+
+.header__username {
+  color: $c-white;
+  font-weight: $fw-5;
+  font-size: $fs-16;
+}

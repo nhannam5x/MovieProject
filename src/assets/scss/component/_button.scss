@@ -1,0 +1,13 @@
+.btn__confirm {
+  background-color: #1890ff;
+  color: white;
+  width: 50%;
+  height: 40px;
+  border-radius: 10px;
+  font-weight: 500;
+  // transform: translateX(35%);
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+}
