@@ -12,7 +12,6 @@ export const layChiTietPhongVeAction = (maLichChieu) => {
         try{
             const result = await quanLyDatVeService.layChiTietPhongVe(maLichChieu);
 
-            // console.log('result',result);
             if(result.status === 200){
                 dispatch({
                     type: SET_CHI_TIET_PHONG_VE,
@@ -32,17 +31,12 @@ export const datVeAction = (thongTinDatVe = new ThongTinLichChieu()) => {
         try{
 
 
-            // dispatch(displayloadingAction)
             const result = await quanLyDatVeService.datVe(thongTinDatVe);
 
            console.log(result.data.content);
-        //    Đặt vé thành công gọi api load lại phóng vé 
-        // await dispatch(layChiTietPhongVeAction(thongTinDatVe.maLichChieu))
-        // await dispatch({type:DAT_VE_HOAN_TAT})
-        //    dispatch(hideloadingAction)
+
     }catch(error){
          console.log(error.respone?.data)
-        // await dispatch(hideloadingAction)
     }
 }
 }

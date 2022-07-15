@@ -23,10 +23,9 @@ export default function EditFilm(props) {
   }, []);
 
   const formik = useFormik({
-    enableReinitialize: true, // enableReinitialize  dùng để set dữ liệu mặc đinh cho formik - chỉ nên dùng cho trang edit không dùng vs những trang khác, dùng sai sẽ bị vòng lặp vô tận
+    enableReinitialize: true, 
     initialValues: {
-      // Các trường api cần
-      maPhim: thongTinPhim.maPhim, // chỉnh sửa phim dựa vào mã phim nhưng không đổi mã nên không load lên giao diện
+      maPhim: thongTinPhim.maPhim, 
       tenPhim: thongTinPhim.tenPhim,
       trailer: thongTinPhim.trailer,
       moTa: thongTinPhim.moTa,
@@ -35,12 +34,11 @@ export default function EditFilm(props) {
       sapChieu: thongTinPhim.sapChieu,
       hot: thongTinPhim.hot,
       danhGia: thongTinPhim.danhGia,
-      hinhAnh: null, // Để null khi không cập nhật lại ảnh (giá trị trả về backend là null thì backend sẽ không nhận ảnh sẽ giữ nguyên)
+      hinhAnh: null, 
       maNhom: GROUP_ID,
     },
     validationSchema: Yup.object({
       tenPhim: Yup.string().required("Tên phim không được bỏ trống!"),
-      // trailer: Yup.string().required("Trailer không được bỏ trống!"),
       trailer: Yup.string()
         .required("Trailer không được bỏ trống!")
         .matches(
@@ -57,7 +55,6 @@ export default function EditFilm(props) {
     }),
     onSubmit: (values) => {
       console.log("Phim Cập Nhật", values);
-      // Tạo đối tượng formData => đưa giá trị values từ formik vào formData
       let formData = new FormData();
       for (let key in values) {
         if (key !== "hinhAnh") {
@@ -69,38 +66,27 @@ export default function EditFilm(props) {
         }
       }
 
-      // Cập nhật phim upload hình
       dispatch(capNhatPhimUploadAction(formData));
     },
   });
-
-  /** handleChangeDatepicker nhận vào 1 obj moment
-   * từ obj moment muốn lấy ra chuỗi thì sử dụng hàm moment
-   * sau khi lấy dữ liệu sử dụng formik.setFieldValue
-   * kết quả nhận được là định dạng ngày tháng theo format
-   */
   const handleChangeDatePicker = (value) => {
-    // console.log("changeDatePicker", moment(values).format("DD/MM/YYYY"));
     let ngayKhoiChieu = moment(value);
     formik.setFieldValue("ngayKhoiChieu", ngayKhoiChieu);
   };
 
-  /** handleChangeSwitch là closure func render động các thuộc tính input cần lấy giá trị, không cần phải viết từng hàm */
-  const handleChangeSwitch = (name) => {
+   const handleChangeSwitch = (name) => {
     return (value) => {
-      formik.setFieldValue(name, value); // thuộc tính name truyên từ phần gọi hàm ở input
-    };
-  };
-  // công dụng giống hàm handleChangeSwitch
-  const handleChangeRating = (name) => {
-    return (value) => {
-      formik.setFieldValue(name, value); // thuộc tính name truyên từ phần gọi hàm ở input
+      formik.setFieldValue(name, value);
     };
   };
 
-  // Hàm chuyển file ảnh thành định dạng base64
+  const handleChangeRating = (name) => {
+    return (value) => {
+      formik.setFieldValue(name, value);
+    };
+  };
+
   const handleChangeFile = (event) => {
-    // Lấy file ra từ event
     let file = event.target.files[0];
     if (
       file.type === "image/jpeg" ||
@@ -108,14 +94,11 @@ export default function EditFilm(props) {
       file.type === "image/gif" ||
       file.type === "image/png"
     ) {
-      // Tạo đối tượng để đọc file
       let reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onload = (event) => {
-        // console.log("fileReader", event.target.result);
-        setImgSrc(event.target.result); // Hình được load lên ở dạng base64
+        setImgSrc(event.target.result);
       };
-      // Đem dữ liệu lưu vào formik
       formik.setFieldValue("hinhAnh", file);
     }
   };
@@ -204,7 +187,6 @@ export default function EditFilm(props) {
             onChange={handleChangeSwitch("dangChieu")}
             checked={formik.values.dangChieu}
           />
-          {/* Giá trị name truyền lên hàm handleChangeSwitch */}
         </Form.Item>
         <Form.Item label='Sắp Chiếu' name='sapChieu' labelAlign='left'>
           <Switch

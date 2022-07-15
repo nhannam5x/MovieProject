@@ -18,7 +18,6 @@ export class QuanLyPhimService extends baseService {
   };
 
   themPhimUploadHinh = (formData) => {
-    // formData -> thông tin của phim
     return this.post(`/api/QuanLyPhim/ThemPhimUploadHinh`, formData);
   };
 
@@ -26,7 +25,6 @@ export class QuanLyPhimService extends baseService {
     return this.get(`/api/QuanLyPhim/LayThongTinPhim?MaPhim=${maPhim}`);
   };
   capNhatPhimUpload = (formData) => {
-    //  formData -> thông tin của phim
     return this.post(`/api/QuanLyPhim/CapNhatPhimUpload`, formData);
   };
 
@@ -35,4 +33,3 @@ export class QuanLyPhimService extends baseService {
   };
 }
 export const quanLyPhimService = new QuanLyPhimService();
-// Nếu api có thay đổi chỉ chỉnh sửa trên file này, không sửa file CarouselActions

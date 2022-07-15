@@ -7,7 +7,6 @@ import { quanLyDatVeService } from "../../../services/QuanLyDatVeServices";
 import { useFormik } from "formik";
 import moment from "moment";
 import * as Yup from "yup";
-// import { quanLyDatVeService } from "../../../services/QuanLyDatVeServices";
 export default function ShowTime(props) {
   const formik = useFormik({
     initialValues: {
@@ -33,17 +32,14 @@ export default function ShowTime(props) {
   const [state, setState] = useState({
     heThongRapChieu: [],
     cumRapChieu: [],
-    // Đặt 2 state chung vs nhau để khi setState từng cái thì cái kia không chạy lại (performan)
   });
-  // console.log("result", state.heThongRapChieu);
-
-  // Lấy hệ thống rạp
+ 
   useEffect(async () => {
     try {
-      let result = await quanLyRapService.layThongTinHeThongRap(); // gọi api
+      let result = await quanLyRapService.layThongTinHeThongRap();
       console.log("Hệ thống rạp: ", result.data.content);
       setState({
-        ...state, // giữ lại state cũ
+        ...state, 
         heThongRapChieu: result.data.content,
       });
     } catch (errors) {
@@ -55,11 +51,11 @@ export default function ShowTime(props) {
   }, []);
 
   const handleChangeHeThongRap = async (value) => {
-    // Từ hệ thống rạp lấy thông tin rạp
+    
     try {
       let result = await quanLyRapService.layThongTinCumRap(value);
       console.log("Cụm rạp: ", result.data.content);
-      // Gán giá trị cụm rạp vào state.cumRap
+    
       setState({
         ...state,
         cumRapChieu: result.data.content,
@@ -99,15 +95,12 @@ export default function ShowTime(props) {
     formik.setFieldValue("giaVe", value);
   };
 
-  // Hàm lấy thông tin hệ thống rạp
   const convertSelectHTR = () => {
-    // state.heThongRapChieu?.map((htr, index) => ({ label: htr.tenHeThongRap, value: htr.tenHeThongRap }))
     return state.heThongRapChieu?.map((htr, index) => {
       return { label: htr.tenHeThongRap, value: htr.maHeThongRap };
     });
   };
 
-  // Hàm lấy thông tin cụm rạp từ hệ thống rạp. Sau khi chọn hệ thống rạp từ hàm convertSelectHTR sẽ chạy vào hàm này để lấy thông tin cụm rạp
   const getCumRap = () => {
     return state.cumRapChieu?.map((cumRap, index) => {
       return { label: cumRap.tenCumRap, value: cumRap.maCumRap };

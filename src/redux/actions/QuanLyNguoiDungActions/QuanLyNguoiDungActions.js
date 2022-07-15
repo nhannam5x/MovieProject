@@ -12,12 +12,10 @@ export const dangNhapAction = (thongTinDangNhap) => {
     try {
       const result = await quanLyNguoiDungService.dangNhap(thongTinDangNhap);
       if (result.data.statusCode === 200) {
-        //  mã 200 là thành công (dựa vào api)
         dispatch({
           type: DANG_NHAP_ACTION,
           thongTinDangNhap: result.data.content,
         });
-        //Chuyển hướng đăng nhập về trang trước đó
         history.goBack();
       }
       console.log("result", result);
@@ -32,7 +30,6 @@ export const layThongTinNguoiDungAction = (thongTinDangNhap) => {
     try {
       const result = await quanLyNguoiDungService.layThongTinNguoiDung();
       if (result.data.statusCode === 200) {
-        //  mã 200 là thành công (dựa vào api)
         dispatch({
           type: SET_THONG_TIN_NGUOI_DUNG,
           thongTinNguoiDung: result.data.content,
@@ -97,7 +94,6 @@ export const xoaNguoiDungAction = (taiKhoan) => {
       let result = await quanLyNguoiDungService.xoaNguoiDung(taiKhoan);
       alert("Xóa người dùng thành công!");
       console.log("Xóa người dùng thành công: ", result.data.content);
-      //sau khi xóa load lại danh sách phim mới
       dispatch(layDanhSachNguoiDungAction());
     } catch (errors) {
       console.log("Xóa người dùng thất bại!", errors.respons?.data);

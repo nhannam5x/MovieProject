@@ -1,9 +1,7 @@
 import Axios from "axios";
 import { DOMAIN, ACCESS_TOKEN, TOKEN_CYBERSOFT } from "../util/setting";
-// import { DOMAIN, TOKEN_CYBERSOFT } from "../../../util/setting";
 
 export class baseService {
-  //put json về phía backend
   put = (url, model) => {
     return Axios({
       url: `${DOMAIN}${url}`,
@@ -12,7 +10,7 @@ export class baseService {
       headers: {
         TokenCyberSoft: TOKEN_CYBERSOFT,
         Authorization: "Bearer " + localStorage.getItem(ACCESS_TOKEN),
-      }, //JWT
+      }, 
     });
   };
 
@@ -24,7 +22,7 @@ export class baseService {
       headers: {
         TokenCyberSoft: TOKEN_CYBERSOFT,
         Authorization: "Bearer " + localStorage.getItem(ACCESS_TOKEN),
-      }, //JWT
+      }, 
     });
   };
 
@@ -35,7 +33,7 @@ export class baseService {
       headers: {
         TokenCyberSoft: TOKEN_CYBERSOFT,
         Authorization: "Bearer " + localStorage.getItem(ACCESS_TOKEN),
-      }, //JWT
+      }, 
     });
   };
 
@@ -46,7 +44,7 @@ export class baseService {
       headers: {
         TokenCyberSoft: TOKEN_CYBERSOFT,
         Authorization: "Bearer " + localStorage.getItem(ACCESS_TOKEN),
-      }, //JWT
+      }, 
     });
   };
 }

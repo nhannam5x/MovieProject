@@ -32,7 +32,7 @@ export default function EditNguoiDung(props) {
   };
 
   const formik = useFormik({
-    enableReinitialize: true, // enableReinitialize  dùng để set dữ liệu mặc đinh cho formik - chỉ nên dùng cho trang edit không dùng vs những trang khác, dùng sai sẽ bị vòng lặp vô tận
+    enableReinitialize: true, 
     initialValues: {
       taiKhoan: data.taiKhoan,
       matKhau: data.matKhau,
@@ -41,20 +41,10 @@ export default function EditNguoiDung(props) {
       maNhom: data.maNhom,
       maLoaiNguoiDung: data.maLoaiNguoiDung,
       hoTen: data.hoTen,
-
-      // taiKhoan: danhSachNguoiDung.taiKhoan,
-      // matKhau: danhSachNguoiDung.matKhau,
-      // email: danhSachNguoiDung.email,
-      // soDt: danhSachNguoiDung.soDt,
-      // maNhom: danhSachNguoiDung.maNhom,
-      // maLoaiNguoiDung: danhSachNguoiDung.maLoaiNguoiDung,
-      // hoTen: danhSachNguoiDung.hoTen,
     },
     onSubmit: (values) => {
       values.maNhom = GROUP_ID;
-      //Tạo đối tượng formdata => Đưa giá trị values từ formik vào formdata
       let formData = values;
-      //Cập nhật người dùng
       dispatch(capNhatThongTinNguoiDungAction(formData));
     },
   });

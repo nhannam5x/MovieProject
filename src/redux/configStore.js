@@ -7,7 +7,6 @@ import { QuanLyNguoiDungReducer } from "./reducers/QuanLyNguoiDungReducer/QuanLy
 import { QuanLyDatVeReducer } from "./reducers/QuanLyDatVeReducer/QuanLyDatVeReducer";
 import { LoadingReducer } from "./reducers/LoadingReducer/LoadingReducer";
 const rootReducer = combineReducers({
-  // State
   CarouselReducer,
   QuanLyPhimReducer,
   QuanLyRapReducer,

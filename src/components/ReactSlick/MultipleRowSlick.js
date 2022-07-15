@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
 import styleSlick from "./_MultipleRowSlick.module.scss";
 
-// import Film from "../Film/Film";
 import Film_Flip from "../Film/Film_Flip";
 import {
   SET_PHIM_DANG_CHIEU,

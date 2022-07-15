@@ -16,7 +16,6 @@ export default function AddUsers(props) {
 
   const formik = useFormik({
     initialValues: {
-      // Các trường api cần
       taiKhoan: "",
       hoTen: "",
       email: "",
@@ -48,9 +47,7 @@ export default function AddUsers(props) {
     }),
     onSubmit: (values) => {
       values.maNhom = GROUP_ID;
-      //  Tạo đối tượng formdata => Đưa giá trị values từ formik vào formdata
       let formData = values;
-      //  Gọi api gửi các giá trị formData về backend xử lý
       dispatch(themNguoiDungAction(formData));
     },
   });

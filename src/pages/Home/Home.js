@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
 import HomeMenu from "./HomeMenu/HomeMenu";
-//Kết nối redux
 import { useSelector, useDispatch } from "react-redux";
 import MultipleRowSlick from "../../components/ReactSlick/MultipleRowSlick";
 import { layDanhSachPhimAction } from "../../redux/actions/QuanLyPhimAction/QuanLyPhimAction";
@@ -10,11 +9,9 @@ import HomeCarousel from "../../templates/HomeTemplate/Layout/Homecarousel/Homec
 export default function Home(props) {
   const { arrFilms } = useSelector((state) => state.QuanLyPhimReducer);
   const dispatch = useDispatch();
-  // const { heThongRapChieu } = useSelector((state) => state.QuanLyRapReducer);
-  // dispatch gọi api
   useEffect(() => {
     const action = layDanhSachPhimAction();
-    dispatch(action); // dispatch function từ thunk (QuanLyPhimActions)
+    dispatch(action); 
     dispatch(layDanhSachHeThongRapAction());
   }, []);
   return (

@@ -13,11 +13,10 @@ export default function Login() {
     initialValues: {
       taiKhoan: "",
       matKhau: "",
-      // Đặt giống api
     },
     onSubmit: (values) => {
-      const action = dangNhapAction(values); // gọi hàm thì trả về hàm thực thi ở file actions
-      dispatch(action); //  dispatch hàm
+      const action = dangNhapAction(values); 
+      dispatch(action);
       console.log("values", values);
     },
   });
@@ -25,7 +24,7 @@ export default function Login() {
   return (
     <form
       onSubmit={(event) => {
-        event.preventDefault(); //  Chặn browser reload
+        event.preventDefault(); 
         formik.handleSubmit(event);
       }}
       className="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
@@ -54,7 +53,6 @@ flex items-center justify-center"
               name="matKhau"
               onChange={formik.handleChange}
               placeholder="Nhập mật khẩu"
-              // minLength={6}
               className="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
 focus:bg-white focus:outline-none"
             />

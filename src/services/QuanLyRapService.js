@@ -23,4 +23,4 @@ export class QuanLyRapService extends baseService {
   };
 }
 export const quanLyRapService = new QuanLyRapService();
-// Nếu api có thay đổi chỉ chỉnh sửa trên file này, không sửa file CarouselActions
+

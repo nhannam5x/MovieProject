@@ -16,7 +16,6 @@ export default function AddNew(props) {
 
   const formik = useFormik({
     initialValues: {
-      // Các trường api cần
       tenPhim: "",
       trailer: "",
       moTa: "",
@@ -30,7 +29,6 @@ export default function AddNew(props) {
     },
     validationSchema: Yup.object({
       tenPhim: Yup.string().required("Tên phim không được bỏ trống!"),
-      // trailer: Yup.string().required("Trailer không được bỏ trống!"),
       trailer: Yup.string().required("Trailer không được bỏ trống!"),
       moTa: Yup.string().required("Mô tả không được bỏ trống!"),
       danhGia: Yup.string()
@@ -41,8 +39,6 @@ export default function AddNew(props) {
       ),
     }),
     onSubmit: (values) => {
-      // console.log("values", values);
-      // Tạo đối tượng formData => đưa giá trị values từ formik vào formData
       let formData = new FormData();
       for (let key in values) {
         if (key !== "hinhAnh") {
@@ -52,36 +48,26 @@ export default function AddNew(props) {
         }
       }
 
-      // Gọi api gửi các giá trị formData về backend xử lý
       dispatch(themPhimUpLoadHinhAction(formData));
     },
   });
 
-  /** handleChangeDatepicker nhận vào 1 obj moment
-   * từ obj moment muốn lấy ra chuỗi thì sử dụng hàm moment
-   * sau khi lấy dữ liệu sử dụng formik.setFieldValue
-   * kết quả nhận được là định dạng ngày tháng theo format
-   */
   const handleChangeDatePicker = (value) => {
-    // console.log("changeDatePicker", moment(values).format("DD/MM/YYYY"));
     let ngayKhoiChieu = moment(value).format("DD/MM/YYYY");
     formik.setFieldValue("ngayKhoiChieu", ngayKhoiChieu);
   };
 
-  /** handleChangeSwitch là closure func render động các thuộc tính input cần lấy giá trị, không cần phải viết từng hàm */
   const handleChangeSwitch = (name) => {
     return (value) => {
-      formik.setFieldValue(name, value); // thuộc tính name truyên từ phần gọi hàm ở input
+      formik.setFieldValue(name, value); 
     };
   };
-  // công dụng giống hàm handleChangeSwitch
   const handleChangeRating = (name) => {
     return (value) => {
-      formik.setFieldValue(name, value); // thuộc tính name truyên từ phần gọi hàm ở input
+      formik.setFieldValue(name, value); 
     };
   };
 
-  // Hàm chuyển file ảnh thành định dạng base64
   const handleChangeFile = (event) => {
     // Lấy file ra từ event
     let file = event.target.files[0];
@@ -91,14 +77,11 @@ export default function AddNew(props) {
       file.type === "image/gif" ||
       file.type === "image/png"
     ) {
-      // Tạo đối tượng để đọc file
       let reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onload = (event) => {
-        // console.log("fileReader", event.target.result);
-        setImgSrc(event.target.result); // Hình được load lên ở dạng base64
+        setImgSrc(event.target.result);
       };
-      // Đem dữ liệu lưu vào formik
       formik.setFieldValue("hinhAnh", file);
     }
   };

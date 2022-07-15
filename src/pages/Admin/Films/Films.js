@@ -100,7 +100,6 @@ export default function Films(props) {
         return (
           <Fragment>
             <div className='flex item-center justify-center text-[16px]'>
-              {/* Dùng 2 thẻ đồng cấp thêm key vào để không warning */}
               <NavLink
                 key={1}
                 className='w-4 mr-3 transform text-blue-500 hover:text-purple-500 hover:scale-110 '
@@ -109,14 +108,11 @@ export default function Films(props) {
                 <EditOutlined />
               </NavLink>
               <span
-                // key={2}
                 className='w-4 mr-3 transform text-red-500 hover:text-purple-500 hover:scale-110'
                 onClick={() => {
-                  // Gọi action xoá
                   if (
                     window.confirm("Bạn có chắc muốn xoá phim " + film.tenPhim)
                   ) {
-                    // Sau khi confirm gọi action xoá
                     dispatch(xoaPhimAction(film.maPhim));
                   }
                 }}
@@ -157,7 +153,6 @@ export default function Films(props) {
     setKeyword(value);
     debounceSearch(value);
   }
-  // End Debound search
 
   return (
     <div className='container'>

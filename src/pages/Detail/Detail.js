@@ -7,19 +7,16 @@ import { useSelector, useDispatch } from "react-redux";
 import { SET_CHI_TIET_PHIM } from "../../redux/types/QuanLyRapType";
 import { layThongTinChiTietPhim } from "../../redux/actions/QuanLyRapAction/QuanLyRapAction";
 import moment from "moment";
-// import { StarFilled, StarOutlined } from "@ant-design/icons";
-// import { map } from "lodash";
 import { NavLink } from "react-router-dom";
 const { TabPane } = Tabs;
 
 export default function Detail(props) {
   const filmDetail = useSelector((state) => state.QuanLyPhimReducer.filmDetail);
 
-  // console.log({ filmDetail });
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Lấy thông tin param từ url
+
     let { id } = props.match.params;
     dispatch(layThongTinChiTietPhim(id));
   });
@@ -34,10 +31,10 @@ export default function Detail(props) {
     >
       <CustomCard
         style={{ paddingTop: 150, minHeight: "100vh" }}
-        effectColor='#C780FF' // required
-        color='#14AEFF' // default color is white
-        blur={10} // default blur value is 10px
-        borderRadius={0} // default border radius value is 10px
+        effectColor='#C780FF' 
+        color='#14AEFF' 
+        blur={10} 
+        borderRadius={0} 
       >
         <div className='grid grid-cols-12'>
           <div className='col-span-5 col-start-4'>

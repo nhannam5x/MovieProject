@@ -60,11 +60,9 @@ export const layThongTinPhimAction = (maPhim) => {
 export const xoaPhimAction = (maPhim) => {
   return async (dispatch) => {
     try {
-      //Sử dụng tham số thamSo
       const result = await quanLyPhimService.xoaPhim(maPhim);
       console.log("result", result.data.content);
       alert("Xoá phim thành công !");
-      //Sau khi xoá load lại danh sách phim mới;
       dispatch(layDanhSachPhimAction());
     } catch (errors) {
       console.log("errors", errors.response?.data);

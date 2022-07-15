@@ -24,11 +24,6 @@ export default function Users(props) {
     dispatch(layDanhSachNguoiDungAction());
   }, []);
 
-  // const onSearch = (value) => {
-  //   //Gọi API layDanhSachNguoiDung
-  //   dispatch(layDanhSachNguoiDungAction(value));
-  // };
-
   const columns = [
     {
       title: "STT",
@@ -111,7 +106,6 @@ export default function Users(props) {
         return (
           <Fragment>
             <div className='flex item-center justify-center text-[16px]'>
-              {/* Dùng 2 thẻ đồng cấp thêm key vào để không warning */}
               <NavLink
                 key={1}
                 className='w-4 mr-3 transform text-blue-500 hover:text-purple-500 hover:scale-110 '
@@ -120,7 +114,6 @@ export default function Users(props) {
                 <EditOutlined />
               </NavLink>
               <span
-                // key={2}
                 className='w-4 mr-3 transform text-red-500 hover:text-purple-500 hover:scale-110'
               >
                 <DeleteOutlined />
@@ -155,7 +148,6 @@ export default function Users(props) {
     console.log("params", pagination, filters, sorter, extra);
   }
 
-  //  Debound search
   function fetchSearchOptions(value) {
     dispatch(layDanhSachNguoiDungAction(value));
   }
@@ -169,7 +161,6 @@ export default function Users(props) {
     setKeyword(value);
     debounceSearch(value);
   }
-  // End Debound search
 
   return (
     <div className='container'>
