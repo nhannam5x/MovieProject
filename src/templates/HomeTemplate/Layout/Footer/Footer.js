@@ -100,7 +100,7 @@ export default function Footer(props) {
             />
           </div>
           <div className='footer__bottom--item2'>
-            <h3>CyberCinema – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</h3>
+            <h3>CyberCinema – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN Cybersoft</h3>
             <p>
               Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ
               Chí Minh, Việt Nam.
@@ -110,9 +110,9 @@ export default function Footer(props) {
               đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020 do Sở kế
               hoạch và đầu tư Thành phố Hồ Chí Minh cấp.
             </p>
-            <p>Số Điện Thoại (Hotline): 1900 545 436</p>
+            <p>Số Điện Thoại (Hotline):  (+84) 961.05.10.14</p>
             <p>
-              Email: <a href='mailto:support@tix.vn'>support@tix.vn</a>
+              Email: <a href='mailto:info@cybersoft.edu.vn'>info@cybersoft.edu.vn</a>
             </p>
           </div>
           <div className='footer__bottom--item3'>
