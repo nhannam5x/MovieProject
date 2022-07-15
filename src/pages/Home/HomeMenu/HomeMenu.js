@@ -46,7 +46,6 @@ export default function HomeMenu(props) {
                   }
                   key={index}
                 >
-                  {/*Load phim tương ứng */}
                   {cumRap.danhSachPhim.slice(0, 4).map((phim, index) => {
                     return (
                       <Fragment key={index}>

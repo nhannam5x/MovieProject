@@ -18,12 +18,10 @@ export const QuanLyDatVeReducer = (state=stateDefault,action)=> {
         }
 
         case DAT_VE:{
-            // Cập nhật danh sách ghé đang đặt
 
             let danhSachGheCapNhat = [...state.danhSachGheDangDat];
             let index = danhSachGheCapNhat.findIndex(gheDD => gheDD.maGhe === action.gheDuocChon.maGhe)
             if(index!= -1){
-                // Nếu tìm thấy ghế được chôn trong mảng có nghĩa là trước đó đã click vào rồi => xóa đi
                 danhSachGheCapNhat.splice(index,1)
             }else{
                 danhSachGheCapNhat.push(action.gheDuocChon)

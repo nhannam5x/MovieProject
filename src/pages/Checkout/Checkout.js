@@ -142,16 +142,7 @@ import moment from "moment";
             <div className = "mb-4"><p className ="text-red-400 font-bold text-xs"> Vui lòng chọn ghế để hiển thị phương thức thanh toán phù hợp</p></div>
           </div>
           <hr/>
-          {/* <div className ="mt-16">
-            <div className = "text-center">
-              <p className = "flex justify-center"><a><svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-500" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                  </svg></a>Vé đã mua không thể đổi hoặc hoàn tiền 
-                </p>
-              <p className = "">Mã vé sẽ được gửi qua tin nhắn <a className ="text-yellow-500">ZMS</a>(Tin nhắn Zalo) và <a className ="text-yellow-300">Email</a> đã nhập</p>
-              </div>
-          </div>
-          <hr/> */}
+  
           <div className ="mb-0 h-full flex flex-col  items-center" style = {{marginBottom:0}}>
             <div onClick={()=>{
               const thongTinDatVe = new ThongTinDatVe();

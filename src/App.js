@@ -27,28 +27,15 @@ export const history = createBrowserHistory();
 function App() {
   return (
     <Router history={history}>
-      {/* <Loading /> */}
       <Switch>
-        {/* Begin HomePage */}
         <HomeTemplate path='/Home' exact Component={Home} />
         <HomeTemplate path='/contact' exact Component={Contact} />
         <HomeTemplate path='/news' exact Component={News} />
         <HomeTemplate path='/detail/:id' exact Component={Detail} />
-        {/* End HomePage */}
-
-        {/* Begin Checkout */}
         <CheckoutTemplate path='/checkout/:id' exact component={Checkout} />
-        {/* End Checkout */}
-
-        {/* Begin User Action */}
         <UserTemplate path='/login' exact Component={Login} />
         <UserTemplate path='/register' exact Component={Register} />
-        {/* End User Action */}
-
-        {/* Admin DashBoard */}
         <AdminTemplate path='/admin' exact Component={Dashboard} />
-
-        {/* Begin Admin Control Users */}
         <AdminTemplate path='/admin/users' exact Component={Users} />
         <AdminTemplate
           path='/admin/users/addusers'
@@ -60,9 +47,6 @@ function App() {
           exact
           Component={EditUsers}
         />
-        {/* End Admin Control Users */}
-
-        {/* Begin Admin Control Films */}
         <AdminTemplate path='/admin/films' exact Component={Films} />
         <AdminTemplate path='/admin/films/addnew' exact Component={AddNew} />
         <AdminTemplate
@@ -75,9 +59,6 @@ function App() {
           exact
           Component={Showtime}
         />
-        {/* End Admin Control Films */}
-
-        {/* Home Page */}
         <HomeTemplate path='/' exact Component={Home} />
       </Switch>
     </Router>

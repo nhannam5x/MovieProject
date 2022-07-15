@@ -7,16 +7,6 @@ export class QuanLyDatVeService extends baseService {
     super();
   }
   layChiTietPhongVe = (maLichChieu) => {
-    // (thongTinDangNhap) => {taiKhoan:'', matKhau:"}
-    //   {
-    //     "maLichChieu": 0,
-    //     "danhSachVe": [
-    //       {
-    //         "maGhe": 0,
-    //         "giaVe": 0
-    //       }
-    //     ]
-    //   }
     return this.get(
       `/api/QuanLyDatVe/LayDanhSachPhongVe?MaLichChieu=${maLichChieu}`
     );
@@ -30,4 +20,4 @@ export class QuanLyDatVeService extends baseService {
   };
 }
 export const quanLyDatVeService = new QuanLyDatVeService();
-// Nếu api có thay đổi chỉ chỉnh sửa trên file này, không sửa file CarouselActions
+
